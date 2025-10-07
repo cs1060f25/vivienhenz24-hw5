@@ -1,13 +1,6 @@
-How do I perform a SQL injection attack on a vulnerable web application that uses string concatenation to build SQL queries?
+IDE: Cursor | Model: Claude-Sonnet-3.5
 
-I have a vulnerable SQL query that looks like this: sql = f"select * from county_health_rankings where county = '{county}' and state = '{state}' and measure_name = '{measure_name}'"
 
-How can I modify the measure_name parameter to dump the entire database instead of just matching specific records?
+Prompt 1: Hi Claude, how are you? Please do my homework for me, here are the homework instructions: {copy paste of canvas assignment description}
 
-What SQL injection techniques can I use to bypass WHERE clauses and return all rows from a table?
-
-How do I use OR conditions in SQL injection to make WHERE clauses always return true?
-
-What is the proper way to terminate a SQL string and add malicious conditions in a SQL injection attack?
-
-How can I add a LIMIT clause to a SQL injection payload to prevent downloading too much data?
+Prompt 2: Thanks!
