@@ -1,6 +1,6 @@
 IDE: Cursor | Model: Claude-Sonnet-3.5
 
 
-Prompt 1: Hi Claude, how are you? Please do my homework for me, here are the homework instructions: {copy paste of canvas assignment description}
+Prompt 1: Hi Claude, how are you? Please do my homework for me, here are the instructions: {copy paste of canvas assignment description}
 
 Prompt 2: Thanks!
