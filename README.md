@@ -22,6 +22,11 @@ This repository contains solutions for CSS106 Homework 5, which involves using g
 - `prompts.txt` - AI prompts used to learn about SQL injection
 - `vulnerability_scanner.py` - Python vulnerability scanner
 - `hw5_server/` - Directory containing vulnerable HTTP and SSH servers
+- `example_corporation.json` - Example data for filing a NY corporation
+- `example_llc.json` - Example data for filing a NY LLC
+- `NY_ENTITIES_API.md` - API documentation for NY entities extension
+- `ny_example_corp_certificate.pdf` - Example NY corporation certificate (DOS-1239-f)
+- `ny_example_llc_certificate.pdf` - Example NY LLC articles (DOS-1336-f)
 
 ## Setup
 
@@ -113,6 +118,46 @@ Test the SQL injection attack (returns 100 rows):
 ```bash
 curl -X POST https://cat-hw4.vercel.app/county_data -H "Content-Type: application/json" -d @attack.json
 ```
+
+### Testing NY Entities API (NEW)
+
+The HTTP server has been extended to support New York State corporations and LLCs based on official NY Department of State forms (DOS-1239-f and DOS-1336-f).
+
+**Start the server:**
+```bash
+cd hw5_server
+python3 http_server.py --port 8080
+```
+
+**File a corporation:**
+```bash
+curl -u admin:admin -X POST -H "Content-Type: application/json" \
+  -d @example_corporation.json http://localhost:8080/file/corporation
+```
+
+**File an LLC:**
+```bash
+curl -u admin:admin -X POST -H "Content-Type: application/json" \
+  -d @example_llc.json http://localhost:8080/file/llc
+```
+
+**List all corporations:**
+```bash
+curl -u admin:admin http://localhost:8080/corporations
+```
+
+**List all LLCs:**
+```bash
+curl -u admin:admin http://localhost:8080/llcs
+```
+
+**Get specific entity:**
+```bash
+curl -u admin:admin "http://localhost:8080/corporation/Test%20Company"
+curl -u admin:admin "http://localhost:8080/llc/Test%20Company"
+```
+
+See `NY_ENTITIES_API.md` for complete API documentation.
 
 ## How It Works
 

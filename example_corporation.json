@@ -1,0 +1,11 @@
+{
+  "name": "Test Company",
+  "county": "ALBANY COUNTY",
+  "address": "418 BROADWAY STE Y, ALBANY, ALBANY COUNTY, NY 12207",
+  "incorporator": "Testy McTestface",
+  "incorporator_address": "418 BROADWAY STE Y, ALBANY, ALBANY COUNTY, NY 12207",
+  "shares": 1000,
+  "par_value": "0.01",
+  "purpose": "To engage in any lawful act or activity for which a corporation may be organized under the Business Corporation Law. The corporation is not formed to engage in any act or activity requiring the consent or approval of any state official, department, board, agency or other body without such consent or approval first being obtained."
+}
+
